@@ -1,0 +1,129 @@
+/* Resetowanie stylów */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Style nagłówka */
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+}
+
+nav ul li {
+	margin-right: 20px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Style panelu witającego*/
+.hello {
+	background-color: #f2f2f2;
+	background-image: url(https://360smartweb.it/wp-content/uploads/2022/01/Hero-Blog.jpg);
+	background-position: bottom;
+	padding: 50px;
+	text-align: center;
+}
+
+.hello h1 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+.hello p {
+	font-size: 21px;
+	line-height: 1.5;
+	margin-bottom: 30px;
+}
+
+.hello button {
+	background-color: #f2f2f2;
+	border: 1px solid #333;
+	color: #333;
+	cursor: pointer;
+	padding: 7px 10px;
+	font-size: 12px;
+	transition: background-color 0.2s;
+}
+
+.hello button:hover {
+	background-color: #333;
+	color: #fff;
+}
+
+/* Style dla glownego kontentu */
+.content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 50px 0;
+	padding: 0 20px;
+}
+
+.content h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.content article {
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	flex-basis: calc(33.33% - 20px);
+	margin-bottom: 30px;
+	padding: 20px;
+	width: 100%;
+	
+}
+
+.content article img {
+	display: block;
+	margin: 0 auto 20px;
+	max-width: 100%;
+	width: 570px;
+	height: 350px;
+	object-fit: cover;
+}
+
+.content article h3 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.content article p {
+	font-size: 16px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.content article button {
+	background-color: #333;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	padding: 10px 20px;
+	transition: background-color 0.2s;
+}
+
+.content article button:hover {
+	background-color: #666;
+}
+
+/* Style dla stopki */
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
