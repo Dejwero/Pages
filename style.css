@@ -29,7 +29,7 @@ nav ul li a {
 /* Style panelu witającego*/
 .hello {
 	background-color: #f2f2f2;
-	background-image: url(https://360smartweb.it/wp-content/uploads/2022/01/Hero-Blog.jpg);
+	background-image: url("tło.jpg");
 	background-position: bottom;
 	padding: 50px;
 	text-align: center;
