@@ -1,59 +1,59 @@
-var rows = 3;
-var columns = 3;
+var wiersze = 3;
+var kolumny = 3;
 
-var currTile; // aktualnie przeciągany kafelek
-var otherTile; // kafelek, z którym aktualnie zamieniamy miejsca
+var aktualny_kafelek; // aktualnie przeciągany kafelek
+var inny_kafelek; // kafelek, z którym aktualnie zamieniamy miejsca
 
 window.onload = function() { // Tworzenie planszy z 9 kafelkami
-    for (let r = 0; r < rows; r++) {
-        for (let c = 0; c < columns; c++) {
-            let tile = document.createElement("img");
-            tile.src = "tlo.jpg";
+    for (let r = 0; r < wiersze; r++) {
+        for (let c = 0; c < kolumny; c++) {
+            let kafelek = document.createElement("img");
+            kafelek.src = "tlo.jpg";
 
 			// dodanie obsługi zdarzeń przeciągania i upuszczania elementów
-            tile.addEventListener("dragstart", dragStart);
-            tile.addEventListener("dragover", dragOver);
-            tile.addEventListener("dragenter", dragEnter);
-            tile.addEventListener("dragleave", dragLeave);
-            tile.addEventListener("drop", dragDrop);
-            tile.addEventListener("dragend", dragEnd); 
+            kafelek.addEventListener("dragstart", dragStart);
+            kafelek.addEventListener("dragover", dragOver);
+            kafelek.addEventListener("dragenter", dragEnter);
+            kafelek.addEventListener("dragleave", dragLeave);
+            kafelek.addEventListener("drop", dragDrop);
+            kafelek.addEventListener("dragend", dragEnd); 
 
-            document.getElementById("board").append(tile); // Dodanie kafelka do planszy
+            document.getElementById("board").append(kafelek); // Dodanie kafelka do planszy
         }
     }
 
-    let pieces = [];
+    let elementy = [];
 	// Stworzenie listy numerów kafelków do ułożenia
-    for (let i=1; i <= rows*columns; i++) {
-        pieces.push(i.toString());
+    for (let i=1; i <= wiersze*kolumny; i++) {
+        elementy.push(i.toString());
     }
-    pieces.reverse();
-    for (let i =0; i < pieces.length; i++) {
-        let j = Math.floor(Math.random() * pieces.length);
+    elementy.reverse();
+    for (let i =0; i < elementy.length; i++) {
+        let j = Math.floor(Math.random() * elementy.length);
 
-        let tmp = pieces[i];
-        pieces[i] = pieces[j];
-        pieces[j] = tmp;
+        let tmp = elementy[i];
+        elementy[i] = elementy[j];
+        elementy[j] = tmp;
     }
 
-    for (let i = 0; i < pieces.length; i++) {
-        let tile = document.createElement("img");
-        tile.src = pieces[i] + ".jpg";
+    for (let i = 0; i < elementy.length; i++) {
+        let kafelek = document.createElement("img");
+        kafelek.src = elementy[i] + ".jpg";
 		
 		// Dodanie event listener dla każdego kafelka do ułożenia
-        tile.addEventListener("dragstart", dragStart);
-        tile.addEventListener("dragover", dragOver);
-        tile.addEventListener("dragenter", dragEnter);
-        tile.addEventListener("dragleave", dragLeave);
-        tile.addEventListener("drop", dragDrop);
-        tile.addEventListener("dragend", dragEnd);
+        kafelek.addEventListener("dragstart", dragStart);
+        kafelek.addEventListener("dragover", dragOver);
+        kafelek.addEventListener("dragenter", dragEnter);
+        kafelek.addEventListener("dragleave", dragLeave);
+        kafelek.addEventListener("drop", dragDrop);
+        kafelek.addEventListener("dragend", dragEnd);
 
-        document.getElementById("pieces").append(tile);
+        document.getElementById("elementy").append(kafelek);
     }
 }
 
 function dragStart() {
-    currTile = this;
+    aktualny_kafelek = this;
 }
 
 function dragOver(e) {
@@ -69,38 +69,36 @@ function dragLeave() {
 }
 
 function dragDrop() {
-    otherTile = this;
+    inny_kafelek = this;
 }
 
 function dragEnd() {
-    if (currTile.src.includes("tlo")) {
+    if (aktualny_kafelek.src.includes("tlo")) {
         return;
     }
-    let currImg = currTile.src;
-    let otherImg = otherTile.src;
-    currTile.src = otherImg;
-    otherTile.src = currImg;
+    let aktualny_Img = aktualny_kafelek.src;
+    let inny_Img = inny_kafelek.src;
+    aktualny_kafelek.src = inny_Img;
+    inny_kafelek.src = aktualny_Img;
 
 	// sprawdzenie, czy puzzle zostały ułożone poprawnie
     if (checkWin()) {
-      let pieces = document.getElementById("pieces").children;
+		alert("Gratulacje, udało Ci się ułożyć puzzle!");
     }
 }
 
 function checkWin() {
-  for (let r = 0; r < rows; r++) {
-    for (let c = 0; c < columns; c++) {
-      let index = r * columns + c;
+	for (let r = 0; r < wiersze; r++) {
+		for (let c = 0; c < kolumny; c++) {
+			let index = r * kolumny + c;
       
-      let imageName = (index + 1) + ".jpg";
-      let correctImageName = (r * columns + c + 1) + ".jpg";
+			let imageName = (index + 1) + ".jpg";
+			let poprawny_imageName = (r * kolumny + c + 1) + ".jpg";
       
-      if (document.getElementById("board").children[index].src.includes(correctImageName) == false) {
-        return false;
-      }
-    }
-  }
-  
-  alert("Gratulacje, udało Ci się ułożyć puzzle!");
-  return true;
+			if (document.getElementById("board").children[index].src.includes(poprawny_imageName) == false) {
+			return false;
+			}
+		}
+	}
+	return true;
 }
