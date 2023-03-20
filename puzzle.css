@@ -43,7 +43,7 @@ h1 {
 }
 
 
-#pieces {
+#elementy {
 	position: absolute;
     top: 50%;
 	right: 5%;
@@ -58,7 +58,7 @@ h1 {
 	background-color: white;
 }
 
-#pieces img {
+#elementy img {
     width: 131px;
     height: 131px;
     border: 0.5px solid grey;
