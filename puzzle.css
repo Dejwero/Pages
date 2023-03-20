@@ -2,6 +2,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   background-color: #1B1B1B;
+  background-image: url("tło.jpg");
   margin: 0;
   padding: 0;
 }
@@ -20,43 +21,41 @@ h1 {
 
 
 #board {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-    width: 595.5px;
-    height: 595.5px;
-    border: 5px solid pink;
-
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-	float: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 595.5px;
+  height: 595.5px;
+  border: 5px solid pink;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
 }
 
 #board img {
-    width: 196.5px;
-    height: 196.5px;
-    border: 0.5px solid white;
+  width: 196.5px;
+  height: 196.5px;
+  border: 0.5px solid white;
 }
 
 
 #pieces {
-	position: absolute;
-    top: 50%;
-	right: 5%;
-    transform: translateY(-50%);
-    height: 670px;
-    width: 267px;
-    border: 5px solid pink;
-
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  height: 670px;
+  width: 267px;
+  border: 5px solid pink;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #pieces img {
-    width: 131px;
-    height: 131px;
-    border: 0.5px solid white;
+  width: 131px;
+  height: 131px;
+  border: 0.5px solid white;
 }
