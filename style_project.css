@@ -12,6 +12,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   color: white;
+  cursor: url("https://www.cursor.cc/cursor3d/93344.png"), auto;
 }
 
 @keyframes fadeIn {
