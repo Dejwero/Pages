@@ -18,24 +18,29 @@
   <body>
     <header class="header">
       <ul>
-        <li><a href="#słońce">Słońce</a></li>
-        <li><a href="#merkury">Merkury</a></li>
-        <li><a href="#wenus">Wenus</a></li>
-        <li><a href="#ziemia">Ziemia</a></li>
-        <li><a href="#mars">Mars</a></li>
-        <li><a href="#jowisz">Jowisz</a></li>
-        <li><a href="#saturn">Saturn</a></li>
-        <li><a href="#uran">Uran</a></li>
-        <li><a href="#neptun">Neptun</a></li>
+        <li><a href="#słońce" onclick="navigation('słońce')">Słońce</a></li>
+        <li><a href="#merkury" onclick="navigation('merkury')">Merkury</a></li>
+        <li><a href="#wenus" onclick="navigation('wenus')">Wenus</a></li>
+        <li><a href="#ziemia" onclick="navigation('ziemia')">Ziemia</a></li>
+        <li><a href="#mars" onclick="navigation('mars')">Mars</a></li>
+        <li><a href="#jowisz" onclick="navigation('jowisz')">Jowisz</a></li>
+        <li><a href="#saturn" onclick="navigation('saturn')">Saturn</a></li>
+        <li><a href="#uran" onclick="navigation('uran')">Uran</a></li>
+        <li><a href="#neptun" onclick="navigation('neptun')">Neptun</a></li>
       </ul>
     </header>
     <div class="container" dir="ltr">
       <section id="słońce">
         <div class="planet-info">
           <h2 class="name">Słońce</h2>
-          <p>Typ: Główna sekwencja</p>
-          <p>Masa: 1.989 × 10^30 kg</p>
           <p>Temperatura powierzchni: 5,500 °C</p>
+          <p>Masa: 1.989 × 10^30 kg</p>
+          <p>Średnica: 1,400,000 km</p>
+          <div class="more-description">
+            <p>Obwód: 4,379,000 km</p>
+            <p>Wiek: 4.567 mld lat</p>
+            <p>Rodzaj gwiazdy: Żółty karzeł</p>
+          </div>
         </div>
         <img class="planet-image" src="planety/słońce.png" alt="Słońce" />
         <div class="planet-model">
@@ -48,11 +53,19 @@
             źródłem energii dla planet tego układu, w tym Ziemi. Składa się
             głównie z wodoru i helu.
           </p>
+          <p class="more-description">
+            W jądrze Słońca zachodzi fuzja jądrowa, w której atomy wodoru łączą
+            się, tworząc atomy helu. Ten proces generuje ogromne ilości energii
+            w postaci światła i ciepła. Słońce pełni kluczową rolę w
+            stabilizacji Układu Słonecznego. Jego grawitacja utrzymuje planety w
+            ruchu orbitalnym, a także oddziałuje na inne ciała niebieskie wokół
+            niego.
+          </p>
           <button
             class="read-more-button"
             onclick="toggleDescription('słońce')"
           >
-            Czytaj więcej
+            Wyświetl więcej informacji
           </button>
         </div>
       </section>
@@ -63,6 +76,12 @@
           <p>Odległość od Słońca: 57.91 mln km</p>
           <p>Okres orbitalny: 88 dni</p>
           <p>Średnica: 4,879 km</p>
+          <div class="more-description">
+            <p>Obwód planety: 15,329 km</p>
+            <p>Masa: 3.30 x 10^23 kg</p>
+            <p>Satelity naturalne: 0</p>
+            <p>Typ planety: Skalista</p>
+          </div>
         </div>
         <img class="planet-image" src="planety/merkury.png" alt="Merkury" />
         <div class="planet-model">
@@ -75,11 +94,21 @@
             najmniejszą planetą w Układzie Słonecznym i posiada bardzo cienką
             atmosferę. Jego powierzchnia jest skałkowa i pełna kraterów.
           </p>
+          <p class="more-description">
+            Ze względu na bliskość Słońca, temperatura na Merkurym może sięgać
+            ekstremalnie wysokich wartości w ciągu dnia i ekstremalnie niskich
+            wartości w nocy. Merkury nie posiada atmosfery w pełnym tego słowa
+            znaczeniu. Jego atmosfera składa się głównie z śladów gazów, takich
+            jak hel i wodor. Ze względu na brak ochrony atmosferycznej,
+            powierzchnia Merkurego jest narażona na bombardowanie promieniowania
+            słonecznego i mikrometeoroidów, co prowadzi do licznych kraterów i
+            powierzchni skałkowej.
+          </p>
           <button
             class="read-more-button"
             onclick="toggleDescription('merkury')"
           >
-            Czytaj więcej
+            Wyświetl więcej informacji
           </button>
         </div>
       </section>
@@ -90,6 +119,12 @@
           <p>Odległość od Słońca: 108.2 mln km</p>
           <p>Okres orbitalny: 224.7 dni</p>
           <p>Średnica: 12,104 km</p>
+          <div class="more-description">
+            <p>Obwód planety: 38,025 km</p>
+            <p>Masa: 4.87 x 10^24 kg</p>
+            <p>Satelity naturalne: 0</p>
+            <p>Typ planety: Skalista</p>
+          </div>
         </div>
         <img class="planet-image" src="planety/wenus.png" alt="Wenus" />
         <div class="planet-model">
@@ -101,12 +136,21 @@
           <p>
             Wenus to druga planeta w Układzie Słonecznym, licząc od Słońca. Jest
             najjaśniejszym obiektem na niebie po Księżycu i jest znana jako
-            "Wieczorna Gwiazda" lub "Poranna Gwiazda". Posiada bardzo gęstą
-            atmosferę z efektem cieplarnianym, co sprawia, że jest najgorętszą
-            planetą w Układzie Słonecznym.
+            "Wieczorna Gwiazda" lub "Poranna Gwiazda".
+          </p>
+          <p class="more-description">
+            Charakterystyczną cechą Wenus jest fakt, że jej okres obrotu wokół
+            osi jest dłuższy niż okres obiegu wokół Słońca, co oznacza, że jeden
+            dzień na Wenus trwa dłużej niż jeden rok. Atmosfera składa się
+            głównie z dwutlenku węgla, z domieszką azotu i śladowych ilości
+            innych gazów. Gęsta atmosfera powoduje efekt cieplarniany, który
+            zatrzymuje ciepło i prowadzi do bardzo wysokich temperatur na
+            powierzchni planety. Temperatury na Wenus sięgają około 465 stopni
+            Celsjusza, co czyni ją najgorętszą planetą w Układzie Słonecznym,
+            pomimo bliższej odległości Merkurego od Słońca.
           </p>
           <button class="read-more-button" onclick="toggleDescription('wenus')">
-            Czytaj więcej
+            Wyświetl więcej informacji
           </button>
         </div>
       </section>
@@ -117,6 +161,12 @@
           <p>Odległość od Słońca: 149.6 mln km</p>
           <p>Okres orbitalny: 365.2 dni</p>
           <p>Średnica: 12,742 km</p>
+          <div class="more-description">
+            <p>Obwód planety: 40,075 km</p>
+            <p>Masa: 5.97 x 10^24 kg</p>
+            <p>Satelity naturalne: 1</p>
+            <p>Typ planety: Skalista</p>
+          </div>
         </div>
         <img class="planet-image" src="planety/ziemia.png" alt="Ziemia" />
         <div class="planet-model">
@@ -129,11 +179,23 @@
             jedyną znaną planetą, na której istnieje życie. Ma różnorodną
             atmosferę i występują na niej różnorodne formy życia, w tym ludzie.
           </p>
+          <p class="more-description">
+            Atmosfera Ziemi składa się głównie z azotu (około 78%) i tlenu
+            (około 21%), z domieszką innych gazów. Ta złożona mieszanka
+            umożliwia istnienie życia poprzez dostarczanie tlenu, regulację
+            temperatury i ochronę przed niekorzystnymi promieniowaniem
+            słonecznym. Ziemia jest unikalna ze względu na obecność wody w
+            trzech stanach: stałym, ciekłym i gazowym. Woda pokrywa znaczną
+            część powierzchni Ziemi i jest niezbędna do istnienia i rozwoju
+            życia. Ziemia jest również znana z różnorodności ekosystemów, od
+            rozległych oceanów i lasów po rozległe pustynie i lodowce, które
+            zapewniają siedliska dla licznych gatunków organizmów.
+          </p>
           <button
             class="read-more-button"
             onclick="toggleDescription('ziemia')"
           >
-            Czytaj więcej
+            Wyświetl więcej informacji
           </button>
         </div>
       </section>
@@ -144,6 +206,12 @@
           <p>Odległość od Słońca: 227.9 mln km</p>
           <p>Okres orbitalny: 687 dni</p>
           <p>Średnica: 6,779 km</p>
+          <div class="more-description">
+            <p>Obwód planety: 21,344 km</p>
+            <p>Masa: 6.39 x 10^23 kg</p>
+            <p>Satelity naturalne: 2</p>
+            <p>Typ planety: Skalista</p>
+          </div>
         </div>
         <img class="planet-image" src="planety/mars.png" alt="Mars" />
         <div class="planet-model">
@@ -152,13 +220,25 @@
         <div class="planet-description">
           <h2>Opis</h2>
           <p>
-            Mars to czwarta planeta w Układzie Słonecznym. Jest znaną planetą
-            czerwoną ze względu na kolor swojej powierzchni. Mars posiada cienką
-            atmosferę i jest miejscem, gdzie prowadzone są badania w celu
-            zrozumienia historii i potencjalnego występowania życia.
+            Mars to czwarta planeta w Układzie Słonecznym. Jest zwany czerwoną
+            planetą ze względu na kolor swojej powierzchni, który jest
+            spowodowany obecnością tlenku żelaza. Mars posiada cienką atmosferę
+            składającą się głównie z dwutlenku węgla, a także śladowych ilości
+            innych gazów.
+          </p>
+          <p class="more-description">
+            Powierzchnia Marsa jest pełna interesujących cech, takich jak
+            doliny, kaniony, wzniesienia i pola lawy. Na powierzchni Marsa
+            znajdują się także biegun północny i biegun południowy, które są
+            pokryte lodem. Mars jest znany z występowania oznak wody w postaci
+            zamarzniętych zbiorników, lodowych czap i skaz na powierzchni.
+            Odkrycia te sugerują, że w przeszłości na Marsie mogły istnieć
+            warunki sprzyjające życiu mikroorganizmów. Obecnie prowadzone są
+            misje kosmiczne mające na celu poszukiwanie dowodów na obecność
+            śladów życia lub potencjalnie zasiedlalnych środowisk.
           </p>
           <button class="read-more-button" onclick="toggleDescription('mars')">
-            Czytaj więcej
+            Wyświetl więcej informacji
           </button>
         </div>
       </section>
@@ -169,6 +249,12 @@
           <p>Odległość od Słońca: 778.6 mln km</p>
           <p>Okres orbitalny: 4,333 dni</p>
           <p>Średnica: 139,820 km</p>
+          <div class="more-description">
+            <p>Obwód planety: 439,264 km</p>
+            <p>Masa: 1.9 x 10^27 kg</p>
+            <p>Satelity naturalne: 95</p>
+            <p>Typ planety: Gazowy olbrzym</p>
+          </div>
         </div>
         <img class="planet-image" src="planety/jowisz.png" alt="Jowisz" />
         <div class="planet-model">
@@ -177,16 +263,27 @@
         <div class="planet-description">
           <h2>Opis</h2>
           <p>
-            Jowisz to piąta planeta w Układzie Słonecznym. Jest największą
-            planetą w Układzie Słonecznym i posiada atmosferę bogatą w gazy,
-            głównie wodór i hel. Jowisz ma charakterystyczne pasy atmosferyczne
-            oraz wiele księżyców, w tym znaną Wielką Czerwoną Plamę.
+            Jowisz to piąta planeta w Układzie Słonecznym, a zarazem największa
+            z planet tego układu. Jowisz jest gazowym olbrzymem, składającym się
+            głównie z wodoru i helu. Posiada imponującą atmosferę, bogatą w
+            różnorodne gazy.
+          </p>
+          <p class="more-description">
+            Atmosfera Jowisza posiada charakterystyczne pasy i strefy
+            atmosferyczne. Jedną z nich jest Wielka Czerwona Plama, która jest
+            ogromnym antycyklonem o średnicy ok. 16,000 km. To jedno z
+            najbardziej rozpoznawalnych zjawisk na powierzchni tej planety.
+            Jowisz jest również znany ze swojego bogatego systemu księżyców.
+            Posiada ich 95, z czego największe to Ganimedes, Kallisto, Io i
+            Europa. Te księżyce są obiektem zainteresowania naukowców z powodu
+            ich różnorodności geologicznej i potencjalnych warunków dla
+            występowania życia.
           </p>
           <button
             class="read-more-button"
             onclick="toggleDescription('jowisz')"
           >
-            Czytaj więcej
+            Wyświetl więcej informacji
           </button>
         </div>
       </section>
@@ -197,6 +294,12 @@
           <p>Odległość od Słońca: 1.4 mld km</p>
           <p>Okres orbitalny: 10,759 dni</p>
           <p>Średnica: 116,460 km</p>
+          <div class="more-description">
+            <p>Obwód planety: 365,882 km</p>
+            <p>Masa: 5.68 x 10^26 kg</p>
+            <p>Satelity naturalne: 146</p>
+            <p>Typ planety: Gazowy olbrzym</p>
+          </div>
         </div>
         <img class="planet-image" src="planety/saturn.png" alt="Saturn" />
         <div class="planet-model">
@@ -207,15 +310,25 @@
           <p>
             Saturn to szósta planeta w Układzie Słonecznym. Jest znana z
             obecności systemu pierścieni, który jest jednym z najbardziej
-            charakterystycznych elementów tej planety. Saturn ma wiele
-            księżyców, w tym większego Tytana, który posiada atmosferę i jest
-            obiektem zainteresowania badań naukowych.
+            charakterystycznych elementów tej planety.
+          </p>
+          <p class="more-description">
+            Atmosfera Saturna składa się głównie z wodoru i helu. Obserwacje
+            ujawniły występowanie pasów atmosferycznych i charakterystycznych
+            burz. Pierścienie Saturna składają się głównie z lodu, kamieni i
+            pyłu, tworząc spektakularne struktury o różnych rozmiarach i
+            kształtach. Zawierają one setki tysięcy mniejszych pierścieni, z
+            których każdy obraca się wokół planety pod wpływem siły
+            grawitacyjnej. Oprócz swojego imponującego systemu pierścieni,
+            Saturn ma również bogaty zestaw księżyców. Jeden z najbardziej
+            interesujących to Tytan, który jest większy od planety Merkury.
+            Tytan posiada gęstą atmosferę, w której występuje azot i metan.
           </p>
           <button
             class="read-more-button"
             onclick="toggleDescription('saturn')"
           >
-            Czytaj więcej
+            Wyświetl więcej informacji
           </button>
         </div>
       </section>
@@ -226,6 +339,12 @@
           <p>Odległość od Słońca: 2.9 mld km</p>
           <p>Okres orbitalny: 30,687 dni</p>
           <p>Średnica: 50,724 km</p>
+          <div class="more-description">
+            <p>Obwód planety: 160,592 km</p>
+            <p>Masa: 8.68 x 10^25 kg</p>
+            <p>Satelity naturalne: 27</p>
+            <p>Typ planety: Gazowy olbrzym</p>
+          </div>
         </div>
         <img class="planet-image" src="planety/uran.png" alt="Uran" />
         <div class="planet-model">
@@ -234,14 +353,24 @@
         <div class="planet-description">
           <h2>Opis</h2>
           <p>
-            Uran to siódma planeta w Układzie Słonecznym. Jest zaliczana do
-            gazowych olbrzymów i posiada charakterystyczną niebieskawą barwę
-            spowodowaną obecnością metanu w jej atmosferze. Uran ma 27 znanych
-            księżyców i jest obiektem badań naukowych w celu zrozumienia
-            struktury planet gazowych.
+            Uran to siódma planeta w Układzie Słonecznym i jedna z najbardziej
+            tajemniczych. Jest zaliczana do gazowych olbrzymów, podobnie jak
+            Jowisz i Saturn. Jednak to, co wyróżnia Urana, to jego
+            charakterystyczna niebieskawa barwa, która wynika z obecności metanu
+            w jego atmosferze.
+          </p>
+          <p class="more-description">
+            Atmosfera Urana składa się głównie z wodoru i helu, ale także
+            zawiera metan, który nadaje planecie niezwykły odcień. To właśnie
+            metan pochłania czerwone światło słoneczne i odbija niebieskie, co
+            sprawia, że Uran prezentuje się jako niebieska kula na tle kosmosu.
+            Uran jest również znany ze swojego unikalnego ułożenia orbitalnego.
+            Planeta ta ma silnie nachyloną oś obrotu, co sprawia, że poruszanie
+            się wokół Słońca przypomina jej "toczenie się na boku". Dlatego Uran
+            nazywany jest również "leżącym na boku gigantem".
           </p>
           <button class="read-more-button" onclick="toggleDescription('uran')">
-            Czytaj więcej
+            Wyświetl więcej informacji
           </button>
         </div>
       </section>
@@ -252,6 +381,12 @@
           <p>Odległość od Słońca: 4.5 mld km</p>
           <p>Okres orbitalny: 60,190 dni</p>
           <p>Średnica: 49,244 km</p>
+          <div class="more-description">
+            <p>Obwód planety: 157,704 km</p>
+            <p>Masa: 1.02 x 10^26 kg</p>
+            <p>Satelity naturalne: 14</p>
+            <p>Typ planety: Gazowy olbrzym</p>
+          </div>
         </div>
         <img class="planet-image" src="planety/neptun.png" alt="Neptun" />
         <div class="planet-model">
@@ -267,15 +402,24 @@
           <p>
             Neptun to ósma i najdalsza planeta w Układzie Słonecznym. Jest
             gazowym olbrzymem podobnym do Urana. Neptun posiada intensywne
-            niebieskie zabarwienie atmosfery spowodowane obecnością metanu. Jest
-            znanym z obecności Wielkiego Ciemnego Plamienia - olbrzymiego wiru
-            atmosferycznego.
+            niebieskie zabarwienie atmosfery spowodowane obecnością metanu.
+          </p>
+          <p class="more-description">
+            Jednym z najbardziej znanych i fascynujących zjawisk na Neptunie
+            jest Wielkie Ciemne Plamienie. Jest to olbrzymi wir atmosferyczny,
+            który jest obserwowany na powierzchni planety od ponad 150 lat. To
+            dynamiczne zjawisko, które przypomina ogromny huragan, występujący w
+            górnych warstwach atmosfery planety. Neptun posiada również system
+            księżyców, z których najbardziej znanym jest Tryton. Jest on jednym
+            z największych księżyców w Układzie Słonecznym i ma niezwykłe cechy,
+            takie jak obecność gejzerów i możliwość posiadania
+            podpowierzchniowego oceanu.
           </p>
           <button
             class="read-more-button"
             onclick="toggleDescription('neptun')"
           >
-            Czytaj więcej
+            Wyświetl więcej informacji
           </button>
         </div>
       </section>
