@@ -1,129 +1,139 @@
-/* Resetowanie stylów */
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+.container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  font-size: 1.5rem;
 }
 
-/* Style nagłówka */
-header {
-	background-color: #333;
-	color: #fff;
-	padding: 20px;
+body {
+  font-family: "Tomorrow", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("kosmos.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  cursor: url("https://www.cursor.cc/cursor3d/93344.png"), auto;
 }
 
-nav ul {
-	display: flex;
-	list-style: none;
+/* Definiowanie animacji */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-nav ul li {
-	margin-right: 20px;
+/* Stylowanie obrazka */
+img {
+  animation: rotation 15s linear infinite; /* Uruchomienie animacji */
 }
 
-nav ul li a {
-	color: #fff;
-	text-decoration: none;
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Zmienia przezroczystość z 0 na 1 */
+  }
 }
 
-/* Style panelu witającego*/
-.hello {
-	background-color: #f2f2f2;
-	background-image: url("tło.jpg");
-	background-position: bottom;
-	padding: 50px;
-	text-align: center;
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rem 5rem;
+  margin: 1rem 0;
+  scroll-snap-align: center;
 }
 
-.hello h1 {
-	font-size: 36px;
-	margin-bottom: 20px;
+.name {
+  font-family: "Bungee Spice", Arial, sans-serif;
 }
 
-.hello p {
-	font-size: 21px;
-	line-height: 1.5;
-	margin-bottom: 30px;
+.planet-image {
+  width: 30rem;
+  height: 30rem;
+  object-fit: cover;
+  position: center;
 }
 
-.hello button {
-	background-color: #f2f2f2;
-	border: 1px solid #333;
-	color: #333;
-	cursor: pointer;
-	padding: 7px 10px;
-	font-size: 12px;
-	transition: background-color 0.2s;
+.planet-model {
+  display: none;
 }
 
-.hello button:hover {
-	background-color: #333;
-	color: #fff;
+.planet-info {
+  width: 30%;
+  padding: 3rem;
+
+  overflow: hidden; /* Zapobiega wyświetlaniu wszystkich liter naraz */
+  opacity: 0; /* Ukrywa litery początkowo */
+  animation: fadeIn 1s forwards; /* Używa animacji fadeIn na literach */
+  animation-delay: calc(
+    0.1s * var(--char-index)
+  ); /* Opóźnienie dla każdej litery */
 }
 
-/* Style dla glownego kontentu */
-.content {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin: 50px 0;
-	padding: 0 20px;
+.planet-description {
+  width: 30%;
+  padding: 3rem;
+  margin: 0 0 0 10rem;
+
+  overflow: hidden; /* Zapobiega wyświetlaniu wszystkich liter naraz */
+  opacity: 0; /* Ukrywa litery początkowo */
+  animation: fadeIn 1s forwards; /* Używa animacji fadeIn na literach */
+  animation-delay: calc(
+    0.1s * var(--char-index)
+  ); /* Opóźnienie dla każdej litery */
 }
 
-.content h2 {
-	font-size: 24px;
-	margin-bottom: 20px;
-	text-align: center;
-	width: 100%;
+h2 {
+  margin-top: 0;
 }
 
-.content article {
-	background-color: #fff;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-	flex-basis: calc(33.33% - 20px);
-	margin-bottom: 30px;
-	padding: 20px;
-	width: 100%;
-	
+.header {
+  background-color: #333;
+  padding: 1.5rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
 }
 
-.content article img {
-	display: block;
-	margin: 0 auto 20px;
-	max-width: 100%;
-	width: 570px;
-	height: 350px;
-	object-fit: cover;
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
-.content article h3 {
-	font-size: 20px;
-	margin-bottom: 10px;
+.header li {
+  margin: 0 0.7rem;
 }
 
-.content article p {
-	font-size: 16px;
-	line-height: 1.5;
-	margin-bottom: 20px;
+.header a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.content article button {
-	background-color: #333;
-	border: none;
-	color: #fff;
-	cursor: pointer;
-	padding: 10px 20px;
-	transition: background-color 0.2s;
+.header a:hover {
+  color: #ffcc00;
 }
 
-.content article button:hover {
-	background-color: #666;
+.read-more-button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-/* Style dla stopki */
-footer {
-	background-color: #333;
-	color: #fff;
-	padding: 20px;
-	text-align: center;
+.section-expanded {
+  background-color: #000000;
+  color: #ffffff;
 }
