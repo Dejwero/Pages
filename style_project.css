@@ -60,6 +60,10 @@ section {
   position: center;
 }
 
+.planet-model {
+  display: none;
+}
+
 .planet-info {
   width: 30%;
   padding: 3rem;
