@@ -12,3 +12,18 @@ navLinks.forEach((link) => {
     targetSection.scrollIntoView({ behavior: "smooth" });
   });
 });
+
+function toggleDescription(sectionId) {
+  const section = document.getElementById(sectionId);
+  section.classList.toggle("section-expanded");
+  const planetImage = section.querySelector(".planet-image");
+  const planetModel = section.querySelector(".planet-model");
+
+  if (section.classList.contains("section-expanded")) {
+    planetImage.style.display = "none";
+    planetModel.style.display = "block";
+  } else {
+    planetImage.style.display = "block";
+    planetModel.style.display = "none";
+  }
+}
