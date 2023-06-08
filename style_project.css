@@ -1,9 +1,13 @@
-html {
+.container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  font-size: 1.5rem;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Tomorrow", Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-image: url("kosmos.jpg");
@@ -15,14 +19,24 @@ body {
   cursor: url("https://www.cursor.cc/cursor3d/93344.png"), auto;
 }
 
-@keyframes fadeIn {
+/* Definiowanie animacji */
+@keyframes rotation {
   from {
-    opacity: 0;
-    transform: translateX(-5rem);
+    transform: rotate(0deg);
   }
   to {
-    opacity: 1;
-    transform: translateX(0);
+    transform: rotate(360deg);
+  }
+}
+
+/* Stylowanie obrazka */
+img {
+  animation: rotation 15s linear infinite; /* Uruchomienie animacji */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Zmienia przezroczystość z 0 na 1 */
   }
 }
 
@@ -32,6 +46,11 @@ section {
   justify-content: space-between;
   padding: 20rem 5rem;
   margin: 1rem 0;
+  scroll-snap-align: center;
+}
+
+.name {
+  font-family: "Bungee Spice", Arial, sans-serif;
 }
 
 .planet-image {
@@ -42,27 +61,44 @@ section {
 }
 
 .planet-info {
-  animation: fadeIn 1s ease-out;
   width: 30%;
-  padding: 20px;
+  padding: 3rem;
+
+  overflow: hidden; /* Zapobiega wyświetlaniu wszystkich liter naraz */
+  opacity: 0; /* Ukrywa litery początkowo */
+  animation: fadeIn 1s forwards; /* Używa animacji fadeIn na literach */
+  animation-delay: calc(
+    0.1s * var(--char-index)
+  ); /* Opóźnienie dla każdej litery */
 }
 
 .planet-description {
-  animation: fadeIn 1s ease-out;
   width: 30%;
-  padding: 20px;
+  padding: 3rem;
+  margin: 0 0 0 10rem;
+
+  overflow: hidden; /* Zapobiega wyświetlaniu wszystkich liter naraz */
+  opacity: 0; /* Ukrywa litery początkowo */
+  animation: fadeIn 1s forwards; /* Używa animacji fadeIn na literach */
+  animation-delay: calc(
+    0.1s * var(--char-index)
+  ); /* Opóźnienie dla każdej litery */
 }
 
 h2 {
   margin-top: 0;
 }
 
-nav {
+.header {
   background-color: #333;
-  padding: 10px 0;
+  padding: 1.5rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
 }
 
-ul {
+.header ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -70,17 +106,30 @@ ul {
   justify-content: center;
 }
 
-li {
-  margin: 0 10px;
+.header li {
+  margin: 0 0.7rem;
 }
 
-a {
+.header a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
-a:hover {
+.header a:hover {
   color: #ffcc00;
+}
+
+.read-more-button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.section-expanded {
+  background-color: #000000;
+  color: #ffffff;
 }
