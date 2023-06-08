@@ -64,6 +64,10 @@ section {
   display: none;
 }
 
+.more-description {
+  display: none;
+}
+
 .planet-info {
   width: 30%;
   padding: 3rem;
@@ -87,6 +91,10 @@ section {
   animation-delay: calc(
     0.1s * var(--char-index)
   ); /* Opóźnienie dla każdej litery */
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 h2 {
